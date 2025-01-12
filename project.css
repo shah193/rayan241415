@@ -1,0 +1,897 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Spread items across the bar */
+    align-items: center;           /* Align items vertically */
+    background-color: #006dae;     /* Stanford Blue */
+    color: white;                  /* White text */
+    padding: 1px;               /* Vertical spacing for navbar */
+}
+
+/* Links inside the navbar */
+.navbar a {
+    display: block;                /* Make links behave like block buttons */
+    text-decoration: none;         /* Remove underline from links */
+    color: white;                  /* White text for links */
+    margin: 0 10px;                /* Add spacing between buttons */
+    padding: 10px 15px;            /* Create a consistent button size */
+    border-radius: 5px;            /* Rounded corners for buttons */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover */
+}
+
+/* Add hover effect to links */
+.navbar a:hover {
+    background-color: #349dda;     /* Light blue background on hover */
+    border-radius: 0%;                
+    text-decoration: none;         /* No underline on hover */
+}
+
+/* Grouping sections for easier layout */
+.navbar .left,
+.navbar .center,
+.navbar .right {
+    display: flex;                 /* Arrange items horizontally */
+    align-items: center;           /* Align items vertically */
+}
+
+
+222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+
+.navbar-secondary {
+    display: flex;
+    justify-content: space-between; /* Space out the sections */
+    align-items: center; /* Align all items vertically */
+    padding: 10px 20px; /* Add space inside the navbar */
+    border-bottom: 20px solid #01070b; /* Blue bottom border */
+    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.2); /* Dark bottom shadow */
+}
+
+/* Left Section (Logo and Text) */
+.navbar-secondary .left {
+    display: flex; /* Arrange items horizontally */
+    align-items: center; /* Align logo and text vertically */
+    height: 20vh;
+    background-color:white;
+    justify-content: space-around;
+}
+
+.navbar-secondary .logo {
+    height: 40px; /* Set logo size */
+    margin-right: 2px; /* Space between logo and text */
+}
+
+/* Center Section (Links) */
+.navbar-secondary .center {
+    display: flex; /* Arrange links horizontally */
+    gap: 30px; /* Space between links */
+    margin-left: 13%;
+}
+
+.navbar-secondary .center a {
+    text-decoration:none;  /* Remove underline */
+    font-size: 14px; /* Font size for links */
+    color: black; /* Default link color */
+    font-weight: bold; /* Bold text */
+    padding: 5px 10px; /* Add padding around links */
+}
+
+.navbar-secondary .center a:hover {
+    background-color: #e6f4ff; /* Light blue background on hover */
+    color: #010a0e; /* Blue text on hover */
+   text-decoration-line: underline;
+   text-decoration-thickness: 3px;
+   text-decoration-color: #006dae;
+    
+  
+}
+
+
+
+/* Right Section (Button) */
+.navbar-secondary .right {
+    display: flex; /* Arrange items horizontally */
+    align-items: center; /* Align button vertically */
+    margin-left: 13%;
+}
+
+.navbar-secondary .cta-button {
+    text-decoration: none;
+  color: #006dae;
+  
+  font-weight: bold;
+  padding: 8px 15px;
+  border: 2px solid #006dae;
+
+  transition: 0.3s;
+  width: 15vw;
+  text-align: center;
+  height: 3.5vh;
+  text-align: center;
+  height: 22px;
+}
+
+
+.navbar-secondary .cta-button:hover {
+    background-color: #006dae; /* Blue background on hover */
+    color: white; /* White text on hover */
+}
+
+
+/* Style the dropdown container */
+.navbar-secondary .center {
+    display: flex;
+    gap: 30px;
+    margin-left: 13%;
+    position: relative; /* Needed for positioning the dropdown */
+}
+
+/* Style the dropdown menu */
+.navbar-secondary .dropdown {
+    position: relative; /* Position for the dropdown */
+}
+
+/* Hide the dropdown content by default */
+.navbar-secondary .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    max-height: 400px; /* Limit dropdown height */
+    overflow-y: auto; /* Scroll if too many items */
+}
+
+/* Style the dropdown links */
+.navbar-secondary .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+/* Change color of links when hovered */
+.navbar-secondary .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu when hovering over any dropdown link */
+.navbar-secondary .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Optional: Style the dropdown button */
+.navbar-secondary .dropdown-btn {
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+
+3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+
+
+
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the whole area */
+    filter:brightness(50%);
+    z-index: -1; /* Puts the image in the background */
+    position: sticky;
+}
+
+.hero-content {
+    position: absolute;
+    top: 30%; /* Move the content down a bit */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center;
+    z-index: 2; /* Ensure the content is above the image */
+}
+
+#fas{
+    color: white;
+}
+
+.hero h1 {
+    font-size: 30px;
+    padding: 15px 30px;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    color: rgb(250, 247, 247);
+    font-weight: 1000;
+    margin-left: -390%;
+}
+
+
+.hero .cta-button {
+    color: rgb(249, 244, 244);
+    font-size: 18px;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 10px;
+    margin-left: -390%;
+}
+
+.hero .cta-button:hover {
+    text-decoration: underline;
+ 
+
+}
+
+/* Search bar styling */
+.search-bar {
+    position: absolute;
+    bottom: 20%; /* Position it a bit above the bottom */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1; /* Make sure search bar is below the text */
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 2px solid #006dae;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #004f79;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2{
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.125rem;
+    margin-top: 3rem;
+    padding-left: 42%;
+    padding-right: 10%;
+    padding-top: .3125rem
+}
+
+.Intro{
+    color: #000;
+    font-family: Roboto, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 0;
+    padding-bottom: 2rem;
+    margin-left: 32%;
+}
+
+.content{
+    height: 100vh;
+}
+
+
+.boxes {
+    display: flex;  /* Arrange the boxes horizontally */
+    justify-content: center;  /* Center the boxes */
+    gap: 20px;  /* Space between boxes */
+    margin-top: 30px;  /* Add space above the boxes */
+}
+
+/* Styling for each box */
+.box {
+    width: 400px;  /* Width of the box */
+    height: 150px;  /* Height of the box */
+    background-color: #f8f9fa;  /* Light blue background */
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #f7fafb;  /* Blue color for text */
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Initial light shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;  /* Smooth transition for shadow and transform */
+}
+
+/* Hover effect for each box */
+.box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Darker shadow on hover */
+    transform: translateY(-5px);  /* Lift the box slightly */
+}
+
+h3{
+    color: #006dae;
+}
+
+#para{
+    color: black;
+}
+
+.first{
+margin-left: 5%;
+
+}
+.span{
+    margin-left: 7%;
+}
+
+/* Styling the new section */
+
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  gap: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 50px 30px 40px rgba(17, 15, 15, 0.24);
+  height: 31vh;
+  margin: 70px;
+}
+
+/* Styling for the left text block */
+.video-text {
+    flex: 1; /* Allow the text block to take available space */
+    max-width: 50%; /* Limit the width of the text block */
+    text-align: left;
+}
+
+.video-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #006dae;
+    margin-top: -40px;
+}
+
+.video-text p{ 
+font-size: 1.3rem;
+color: #333;
+margin-bottom: 20px;
+margin-top: 12%;
+}
+
+
+/* Button styling */
+.watch-video-btn {
+    background-color: #006dae; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    text-decoration: none; /* Remove underline from the link */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.watch-video-btn:hover {
+    background-color: #349dda; /* Change button color on hover */
+}
+
+/* Styling for the right image */
+.video-image img  {
+    width: 650px;
+    height: 48vh;
+  }
+
+.video-image{
+    margin-top: -45px;
+}
+
+.h4{
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #000;
+    margin-top: -100px;
+}
+
+
+/* Styling for the entire feature section */
+.feature-section {
+    background-image: url('featureimg.jpeg'); /* Add your background image URL here */
+    background-size: cover; /* Make the background cover the whole div */
+    background-position: center; /* Center the background */
+    padding: 50px 20px; /* Add padding to the section */
+    text-align: center;
+    color: white; /* Text color */
+    height: 100vh;
+    margin: 20px;
+}
+
+/* Header text at the top of the section */
+.feature-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.feature-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Four feature boxes arranged in a row */
+.feature-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 8%;
+    justify-content: space-evenly;
+    height: 50vh;
+}
+
+/* Styling for each feature box */
+.feature-box {
+    background-color: rgba(18, 17, 17, 0.59);
+    width: 22%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+  
+
+/* Image inside the feature box */
+.feature-box-img {
+    width: 100px; /* Width of the image */
+    height: 100px; /* Height of the image */
+    object-fit: cover; /* Ensure the image covers the space */
+    margin-bottom: 15px; /* Space between image and text */
+    border-radius: 50%; /* Make the image circular */
+}
+
+/* Feature box heading and content styling */
+.feature-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: #333; /* Text color for content */
+}
+
+h5{
+    color: white;
+    font-weight: 1000;
+    font-size: 2rem;
+}
+
+
+h6{
+    font-weight: 1000;
+    font-size: 1rem;
+}
+
+#globe{
+    color: white;
+}
+
+
+.news{
+    border: 40px;
+}
+
+#fa{
+  font-size: 40px;
+}
+
+
+/* Main container for the image-content box */
+.image-content-box {
+    display: flex; /* Arrange image and content side by side */
+    align-items: center; /* Vertically center align content */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Add spacing and center align */
+    max-width: 800px; /* Limit the width of the box */
+    overflow: hidden; /* Clip content to the box */
+    text-align: left; /* Align text to the left */
+}
+
+/* Image section of the box */
+.box-image {
+    flex: 1; /* Take up 1 part of the box */
+}
+
+.box-image img {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensure the image scales nicely */
+    border-top-left-radius: 10px; /* Rounded top-left corner */
+    border-bottom-left-radius: 10px; /* Rounded bottom-left corner */
+}
+
+/* Content section of the box */
+.box-content {
+    flex: 2; /* Take up 2 parts of the box */
+    padding: 20px; /* Add spacing around the content */
+}
+
+.box-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333333; /* Dark text color */
+    font-weight: bold;
+}
+
+.box-content p {
+    font-size: 16px;
+    color: #666666; /* Lighter text color for the description */
+    line-height: 1.6;
+}
+
+
+/* Main container for vertical layout */
+.vertical-layout-container {
+    display: flex;
+    gap: 20px; /* Space between vertical box and horizontal boxes */
+    margin: 40px auto; /* Center and add spacing */
+    max-width: 1000px; /* Adjust layout width */
+}
+
+/* Vertical Box Styling */
+.vertical-box {
+    flex: 1; /* Take up equal space */
+    background-color: #f5f5f5; /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    overflow: hidden; /* Clip content if overflow */
+    text-align: left;
+    height: 80vh;
+}
+
+.vertical-content {
+    padding: 20px;
+}
+
+.vertical-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color:#006dae;
+    font-weight: bold;
+}
+
+.vertical-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.vertical-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Scale image nicely */
+}
+
+.vertical-footer {
+    padding: 10px 20px;
+    background-color: #eaeaea;
+    font-size: 14px;
+    color: #444;
+    text-align: center;
+}
+
+/* Horizontal Boxes Styling */
+.horizontal-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    gap: 20px; /* Space between boxes */
+    flex: 1.5; /* Larger area for horizontal boxes */
+}
+
+.horizontal-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.horizontal-box img {
+    width: 100%;
+    max-height: 150px; /* Adjust height to keep images consistent */
+    object-fit: contain; /* Ensure images scale properly */
+    border-radius: 5px; /* Optional: round corners for images */
+}
+
+.horizontal-box p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.med{
+    font-size: 1rem;
+    color: grey;
+    margin-top: 52px;
+}
+
+.science{
+    color: grey;
+}
+
+/* Styling for the horizontal boxes container */
+.horizontal-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Default for two-column boxes */
+    gap: 20px; /* Space between items */
+}
+
+/* Rectangular Box Styling */
+.rectangular-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    grid-column: span 2;
+    width: 50vw;
+}
+.rectangular-box:hover{
+    cursor: pointer;
+    box-shadow:50px 15px 30px rgba(0, 0, 0, 0.468); ;
+}
+
+/* Image styling for the rectangular box */
+.rectangular-box img {
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    height: 50vh;
+}
+
+/* Text styling for the rectangular box */
+.rectangular-text h3 {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rectangular-text p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Styling for the button container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Add some spacing above the button */
+}
+
+/* Styling for the sharp-edged button */
+.sharp-button {
+    background-color: #006dae; /* Blue background */
+    color: white; /* White text */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px; /* Button size */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Capitalize the text */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+/* Hover effect for the button */
+.sharp-button:hover {
+    background-color: #004f79; /* Darker blue on hover */
+}
+
+
+/* Styling for the button section */
+.button-section {
+    margin-top: 40px; /* Add spacing above the section */
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+/* Styling for the button container (already provided) */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+}
+
+/* Styling for the sharp-edged button (already provided) */
+.sharp-button {
+    background-color: #006dae; /* Blue background */
+    color: white; /* White text */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px; /* Button size */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Capitalize the text */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+.sharp-button:hover {
+    background-color: #004f79; /* Darker blue on hover */
+}
+
+/* Styling for the button section */
+.button-section {
+    margin-top: 20px; /* Add spacing above the button section */
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+/* Styling for the button container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+}
+
+/* Styling for the sharp-edged button */
+.sharp-button {
+    background-color: #006dae; /* Blue background */
+    color: white; /* White text */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px; /* Button size */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Capitalize the text */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+/* Hover effect for the button */
+.sharp-button:hover {
+    background-color: #004f79; /* Darker blue on hover */
+}
+
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #ddd;
+    padding: 40px 0; /* Increase padding for larger height */
+    margin-top: 30px;
+    font-size: 16px; /* Make the font size larger */
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Footer Social Section */
+.footer-social {
+    text-align: center;
+    margin-bottom: 20px; /* Increase space below the social icons */
+}
+
+.footer-social i {
+    color: #ddd;
+    margin: 0 20px; /* Increase spacing between social icons */
+    font-size: 30px; /* Increase icon size */
+    cursor: pointer;
+}
+
+.footer-social i:hover {
+    color: #fff;
+}
+
+/* Footer Acknowledgment */
+.footer-acknowledgment {
+    text-align: center;
+    margin-bottom: 30px; /* Increase spacing below acknowledgment */
+    font-size: 18px; /* Increase font size */
+}
+
+.footer-acknowledgment a {
+    color: #0af;
+    text-decoration: none;
+    font-weight: bold; /* Bold the acknowledgment link */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Increase space between links section */
+    border-bottom: 0.5px solid #ddd;
+    padding-bottom: 20px; /* Add some padding below the section */
+}
+
+.footer-section h4 {
+    margin-bottom: 15px; /* Increase space below the section titles */
+    font-size: 18px; /* Increase font size */
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 10px; /* Increase spacing between list items */
+}
+
+.footer-section a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px; /* Increase font size */
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Info */
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px; /* Increase space between sections */
+    font-size: 16px; /* Increase font size */
+    border-bottom: 0.5px solid #ddd;
+    padding-bottom: 20px; /* Add some padding below the section */
+}
+
+.footer-info div {
+    width: 22%;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px; /* Increase font size */
+}
+
+.footer-bottom a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 10px; /* Increase space between footer links */
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom p {
+    margin-top: 20px; /* Add more space at the top of the bottom paragraph */
+}
+
+/* Adjusting the footer for larger height */
+footer {
+    padding: 60px 0;
+}
+
+
+
