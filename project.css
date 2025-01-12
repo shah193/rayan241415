@@ -409,7 +409,7 @@ margin-top: 12%;
 
 /* Styling for the entire feature section */
 .feature-section {
-    background-image: url('featureimg.jpeg'); /* Add your background image URL here */
+    background-image: url('/PICTURES/featureimg.jpeg'); /* Add your background image URL here */
     background-size: cover; /* Make the background cover the whole div */
     background-position: center; /* Center the background */
     padding: 50px 20px; /* Add padding to the section */
